@@ -1,0 +1,1 @@
+class BankTransfer extends Payment { }

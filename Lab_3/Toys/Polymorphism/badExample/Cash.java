@@ -1,0 +1,1 @@
+class Cash extends Payment { } 

@@ -1,0 +1,1 @@
+class Card extends Payment { }

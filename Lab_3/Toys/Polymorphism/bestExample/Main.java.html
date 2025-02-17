@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/Documents/CS2030/Toys/Lab3/Polymorphism/bestExample/Main.java.html</title>
+<meta name="Generator" content="Vim/9.1">
+<meta name="plugin-version" content="vim9.0_v2">
+<meta name="syntax" content="java">
+<meta name="settings" content="number_lines,use_css,no_foldcolumn,expand_tabs,line_ids,pre_wrap,prevent_copy=,use_input_for_pc=none">
+<meta name="colorscheme" content="morning">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #e4e4e4; }
+body { font-family: monospace; color: #000000; background-color: #e4e4e4; }
+* { font-size: 1em; }
+.Statement { color: #af0000; font-weight: bold; }
+.PreProc { color: #5f00af; }
+.Type { color: #00875f; font-weight: bold; }
+.LineNr { color: #af0000; }
+-->
+</style>
+
+<script>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  var lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr"> 1 </span><span class="PreProc">import</span> java.util.List;
+<span id="L2" class="LineNr"> 2 </span>
+<span id="L3" class="LineNr"> 3 </span><span class="Type">class</span> Main {
+<span id="L4" class="LineNr"> 4 </span>
+<span id="L5" class="LineNr"> 5 </span>    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> main(String[] args) {
+<span id="L6" class="LineNr"> 6 </span>        processPayment(List.of(<span class="Statement">new</span> Card(), <span class="Statement">new</span> Cash(), <span class="Statement">new</span> BankTransfer()));
+<span id="L7" class="LineNr"> 7 </span>    }
+<span id="L8" class="LineNr"> 8 </span>
+<span id="L9" class="LineNr"> 9 </span>    <span class="Type">public</span> <span class="Type">static</span> <span class="Type">void</span> processPayment(List&lt;Payment&gt; paymentList) {
+<span id="L10" class="LineNr">10 </span>        <span class="Statement">for</span> (Payment p : paymentList) {
+<span id="L11" class="LineNr">11 </span>            System.out.println(p.process());
+<span id="L12" class="LineNr">12 </span>        }
+<span id="L13" class="LineNr">13 </span>    }
+<span id="L14" class="LineNr">14 </span>}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
